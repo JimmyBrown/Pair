@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		BFD797FB247825C4007739AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD797FA247825C4007739AF /* AppDelegate.swift */; };
 		BFD797FD247825C4007739AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD797FC247825C4007739AF /* SceneDelegate.swift */; };
-		BFD797FF247825C4007739AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD797FE247825C4007739AF /* ViewController.swift */; };
 		BFD79802247825C4007739AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD79800247825C4007739AF /* Main.storyboard */; };
 		BFD79804247825C4007739AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD79803247825C4007739AF /* Assets.xcassets */; };
 		BFD79807247825C4007739AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD79805247825C4007739AF /* LaunchScreen.storyboard */; };
+		BFD7981324782A2F007739AF /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD7981224782A2F007739AF /* Person.swift */; };
+		BFD7981724782BEB007739AF /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD7981624782BEB007739AF /* PersonController.swift */; };
+		BFD79819247838F5007739AF /* PairTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD79818247838F5007739AF /* PairTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BFD797F7247825C4007739AF /* Pair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD797FA247825C4007739AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD797FC247825C4007739AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BFD797FE247825C4007739AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BFD79801247825C4007739AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFD79803247825C4007739AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD79806247825C4007739AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFD79808247825C4007739AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFD7981224782A2F007739AF /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		BFD7981624782BEB007739AF /* PersonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
+		BFD79818247838F5007739AF /* PairTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,65 @@
 		BFD797F9247825C4007739AF /* Pair */ = {
 			isa = PBXGroup;
 			children = (
+				BFD7980F24782615007739AF /* Models */,
+				BFD798102478261C007739AF /* Views */,
+				BFD7981124782626007739AF /* Controllers */,
+				BFD7980E247825DC007739AF /* Resources */,
+			);
+			path = Pair;
+			sourceTree = "<group>";
+		};
+		BFD7980E247825DC007739AF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				BFD797FA247825C4007739AF /* AppDelegate.swift */,
 				BFD797FC247825C4007739AF /* SceneDelegate.swift */,
-				BFD797FE247825C4007739AF /* ViewController.swift */,
-				BFD79800247825C4007739AF /* Main.storyboard */,
 				BFD79803247825C4007739AF /* Assets.xcassets */,
 				BFD79805247825C4007739AF /* LaunchScreen.storyboard */,
 				BFD79808247825C4007739AF /* Info.plist */,
 			);
-			path = Pair;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BFD7980F24782615007739AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BFD7981224782A2F007739AF /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BFD798102478261C007739AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFD79800247825C4007739AF /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BFD7981124782626007739AF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFD7981524782BCE007739AF /* Model Controllers */,
+				BFD7981424782BC0007739AF /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BFD7981424782BC0007739AF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFD79818247838F5007739AF /* PairTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		BFD7981524782BCE007739AF /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFD7981624782BEB007739AF /* PersonController.swift */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +192,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFD797FF247825C4007739AF /* ViewController.swift in Sources */,
+				BFD7981724782BEB007739AF /* PersonController.swift in Sources */,
+				BFD79819247838F5007739AF /* PairTableViewController.swift in Sources */,
+				BFD7981324782A2F007739AF /* Person.swift in Sources */,
 				BFD797FB247825C4007739AF /* AppDelegate.swift in Sources */,
 				BFD797FD247825C4007739AF /* SceneDelegate.swift in Sources */,
 			);
@@ -286,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22HUHPT9D9;
-				INFOPLIST_FILE = Pair/Info.plist;
+				INFOPLIST_FILE = Pair/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22HUHPT9D9;
-				INFOPLIST_FILE = Pair/Info.plist;
+				INFOPLIST_FILE = Pair/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
